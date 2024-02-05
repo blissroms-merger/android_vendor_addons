@@ -34,6 +34,11 @@ PRODUCT_COPY_FILES += \
 # Bootanimation
 include vendor/addons/prebuilt/bootanimation/bootanimation.mk
 
+ifeq ($(TARGET_HAS_UDFPS),true)
+PRODUCT_PACKAGES += \
+    UdfpsAnimations
+endif
+
 # Clocks
 PRODUCT_PACKAGES += \
     SystemUIClocks-BigNum \
